@@ -1,0 +1,377 @@
+.knowledge-base {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.knowledge-base-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #444;
+}
+
+.knowledge-base-header h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #646cff;
+}
+
+.item-count {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.search-section {
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+.tags-filter {
+  margin-bottom: 1rem;
+}
+
+.tags-filter h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.tag-button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #555;
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.tag-button:hover {
+  border-color: #646cff;
+  background-color: #646cff;
+  color: white;
+}
+
+.tag-button.active {
+  background-color: #646cff;
+  border-color: #646cff;
+  color: white;
+}
+
+.knowledge-items {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 1.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.knowledge-item {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 0.75rem;
+  border-left: 3px solid #555;
+  transition: border-color 0.25s;
+}
+
+.knowledge-item.pinned {
+  border-left-color: #f59e0b;
+  background-color: #2a2416;
+}
+
+.item-header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.pin-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background-color 0.25s;
+  font-size: 0.8rem;
+}
+
+.pin-button:hover,
+.delete-button:hover {
+  background-color: #333;
+}
+
+.item-content {
+  margin-bottom: 0.75rem;
+}
+
+.question {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.question strong {
+  color: #646cff;
+  margin-right: 0.25rem;
+}
+
+.answer {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.answer strong {
+  color: #4ade80;
+  margin-right: 0.25rem;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.tags-section {
+  flex: 1;
+}
+
+.tags-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.tag {
+  background-color: #646cff;
+  color: white;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+.no-tags {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+.edit-tags-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.125rem;
+  margin-left: 0.25rem;
+  font-size: 0.7rem;
+  opacity: 0.6;
+  transition: opacity 0.25s;
+}
+
+.edit-tags-button:hover {
+  opacity: 1;
+}
+
+.tags-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tags-input {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #2a2a2a;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 0.75rem;
+}
+
+.tags-edit-buttons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tags-edit-buttons button {
+  background: none;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 0.125rem 0.25rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tags-edit-buttons button:hover {
+  border-color: #646cff;
+  background-color: #646cff;
+}
+
+.created-date {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+/* Custom scrollbar for knowledge items */
+.knowledge-items::-webkit-scrollbar {
+  width: 4px;
+}
+
+.knowledge-items::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 2px;
+}
+
+.knowledge-items::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 2px;
+}
+
+.knowledge-items::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+@media (prefers-color-scheme: light) {
+  .knowledge-base-header {
+    border-bottom-color: #ddd;
+  }
+
+  .knowledge-base-header h2 {
+    color: #747bff;
+  }
+
+  .item-count {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .search-input {
+    background-color: #f9f9f9;
+    border-color: #ddd;
+    color: #213547;
+  }
+
+  .tags-filter h4 {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .tag-button {
+    border-color: #ccc;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .tag-button:hover,
+  .tag-button.active {
+    border-color: #747bff;
+    background-color: #747bff;
+  }
+
+  .empty-state {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .knowledge-item {
+    background-color: #f9f9f9;
+    border-left-color: #ccc;
+  }
+
+  .knowledge-item.pinned {
+    border-left-color: #d97706;
+    background-color: #fef3c7;
+  }
+
+  .pin-button:hover,
+  .delete-button:hover {
+    background-color: #e5e5e5;
+  }
+
+  .question,
+  .answer {
+    color: #213547;
+  }
+
+  .question strong {
+    color: #747bff;
+  }
+
+  .answer strong {
+    color: #16a34a;
+  }
+
+  .tag {
+    background-color: #747bff;
+  }
+
+  .no-tags {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .tags-input {
+    background-color: #ffffff;
+    border-color: #ddd;
+    color: #213547;
+  }
+
+  .tags-edit-buttons button {
+    border-color: #ccc;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .tags-edit-buttons button:hover {
+    border-color: #747bff;
+    background-color: #747bff;
+    color: white;
+  }
+
+  .created-date {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .knowledge-items::-webkit-scrollbar-track {
+    background: #e5e5e5;
+  }
+
+  .knowledge-items::-webkit-scrollbar-thumb {
+    background: #ccc;
+  }
+
+  .knowledge-items::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+}

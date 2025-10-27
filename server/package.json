@@ -1,0 +1,37 @@
+{
+  "name": "team-dashboard-server",
+  "version": "1.0.0",
+  "description": "Express server with Sequelize and SQLite for team dashboard with AI assistant",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed:all"
+  },
+  "keywords": [
+    "express",
+    "sequelize",
+    "sqlite",
+    "api",
+    "openai",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "openai": "^6.7.0",
+    "sequelize": "^6.35.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "sequelize-cli": "^6.6.2"
+  }
+}
